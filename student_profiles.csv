@@ -1,6 +1,0 @@
-﻿student_id;first_name;last_name;degree;semester;skills;interests;programming_languages;tools;career_interest
-1;Amina;Hadzic;Informatik;5;"Data Analysis; Machine Learning; SQL";"AI; Healthcare IT; Data Science";"Python; SQL; R";"Power BI; Pandas; NumPy";Data Scientist
-2;Marko;Petrovic;Wirtschaftsinformatik;3;"Process Modeling; Requirements Engineering";"Digital Transformation; ERP Systems";"Java; Python";"SAP; BPMN Tools; Jira";IT Consultant
-3;Lea;Schneider;Medieninformatik;4;"UX Design; Prototyping; Frontend Development";"UI/UX; Human Computer Interaction";"JavaScript; HTML; CSS";"Figma; Adobe XD; React";UX Designer
-4;Sarah;Meier;Data Science;2;"Statistics; Data Cleaning; Visualization";"Big Data; Predictive Analytics";"Python; R";"Tableau; Jupyter Notebook";Data Analyst
-5;Emir;Kovacevic;Medizininformatik;6;"Health Data Management; Interoperability";"E-Health; Digital Health; AI in Medicine";"Python; SQL";"FHIR Tools; HL7; Power BI";Health IT Project Manager
