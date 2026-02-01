@@ -1,0 +1,284 @@
+{
+  "name": "CareerCoachGPT - Production",
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://haystack:8002/search",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"query\": {{ JSON.stringify($json.enriched_query) }},\n  \"top_k\": 5\n}",
+        "options": {}
+      },
+      "id": "76321f41-78e5-46d4-aded-fdc028dc5eaa",
+      "name": "Haystack - Semantic Search",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        288,
+        -32
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "\nconst haystackResponse = $input.item.json;\nconst documents = haystackResponse.documents || [];\n\nconst enrichNode = $('Enrich Query with CSV').item.json;\nconst studentProfile = enrichNode.student_profile || '';\nconst chatInput = enrichNode.original_query || '';\n\n\nconst jobsList = [];\nconst skillsList = [];\n\n\nfor (const doc of documents) {\n  const type = doc.metadata?.type || '';\n  const content = doc.content || '';\n  \n  if (type === 'job_description' || type === 'skill_learning_path') {\n    \n    jobsList.push({\n      title: doc.metadata?.study_program || 'Career Path',\n      description: content.substring(0, 200) + '...', \n      relevance_score: doc.score || 0\n    });\n  }\n}\n\n\nconst fullContext = `STUDENT DATA:\\n${studentProfile}\\n\\nUSER REQUEST:\\n${chatInput}\\n\\nDATABASE MATCHESFound ${jobsList.length} relevant paths.`;\n\nreturn {\n  json: {\n    full_task_context: fullContext,\n    student_profile: studentProfile,\n    job_list: jobsList,  \n    original_query: chatInput\n  }\n};"
+      },
+      "id": "dced0e2a-039b-4b8f-82d0-3726818c1e3c",
+      "name": "Format Context for CrewAI",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        528,
+        -32
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://crewai:8001/analyze",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"query\": {{ JSON.stringify($json.full_task_context) }},\n  \"jobs\": {{ JSON.stringify($json.job_list) }},\n  \"student_profile\": {{ JSON.stringify($json.student_profile) }}\n}",
+        "options": {
+          "timeout": 600000
+        }
+      },
+      "id": "05416a7a-0daa-4753-810c-535dfe6e6d8a",
+      "name": "CrewAI - Multi-Agent Analysis",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        752,
+        -32
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json;\n\nconsole.log('📝 Formatting final response');\nconsole.log('Input keys:', Object.keys(input));\n\nlet coachText = input.output || '';\n\nconsole.log('Original coach text length:', coachText.length);\nconsole.log('First 100 chars:', coachText.substring(0, 100));\n\n\ncoachText = coachText\n  .replace(/\\\\n\\\\n/g, '\\n\\n')  // Double newlines zuerst\n  .replace(/\\\\n/g, '\\n')        // Dann single newlines\n  .trim();\n\n\ncoachText = coachText.replace(/^(## |### )+/, '');\n\n\nlet finalResponse = `## 👨‍🏫 Your Career Analysis\n\n${coachText}`;\n\n\nconst topJobs = input.top_jobs || [];\nif (Array.isArray(topJobs) && topJobs.length > 0) {\n  finalResponse += '\\n\\n### 🎯 Recommended Job Roles\\n';\n  \n  topJobs.forEach((job, index) => {\n    if (typeof job === 'object') {\n      const title = job.title || job.name || `Job ${index + 1}`;\n      const description = job.description || '';\n      const score = job.relevance_score || job.match_score || '';\n      \n      finalResponse += `\\n**${index + 1}. ${title}**`;\n      if (description) finalResponse += `\\n   ${description}`;\n      if (score) finalResponse += `\\n   *Relevance: ${score}*`;\n      finalResponse += '\\n';\n    } else {\n      finalResponse += `\\n* ${job}`;\n    }\n  });\n}\n\n\nconst paths = input.suggested_learning_paths || {};\nconst pathKeys = Object.keys(paths);\nif (pathKeys.length > 0) {\n  finalResponse += '\\n\\n### 📚 Suggested Learning Paths\\n';\n  pathKeys.forEach(key => {\n    const path = paths[key];\n    finalResponse += `\\n* **${path}**`;\n  });\n}\n\n\nfinalResponse += '\\n\\n---\\n*I hope this helps! Which area would you like to explore further?* 🚀';\n\nconsole.log('✅ Final response length:', finalResponse.length);\nconsole.log('Preview:', finalResponse.substring(0, 200));\n\nreturn {\n  json: {\n    response: finalResponse\n  }\n};"
+      },
+      "id": "97e68f25-0492-46ee-bf38-22d13f0f78b5",
+      "name": "Format Final Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1392,
+        -32
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.response }}",
+        "options": {}
+      },
+      "id": "cfb27676-a7ca-4129-b81e-8cbb9d8bec72",
+      "name": "Send Response to User",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1616,
+        -32
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "allowFileUploads": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -368,
+        -32
+      ],
+      "id": "cdfcd6ae-57d5-4d1c-8ca7-3c29e7354ce7",
+      "name": "When chat message received1",
+      "webhookId": "c66db199-5800-4923-80da-14118909d940"
+    },
+    {
+      "parameters": {
+        "binaryPropertyName": "data0",
+        "options": {
+          "delimiter": ";",
+          "encoding": "utf-8",
+          "readAsString": true
+        }
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1.1,
+      "position": [
+        -144,
+        -32
+      ],
+      "id": "994e67fd-fe86-44fa-b9f5-8f591003e179",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "jsCode": "const csvData = $(\"Extract from File\").all();\nconst originalQuery = $(\"When chat message received1\").first().json.chatInput || \"\";\n\nlet profileText = \"\";\nlet rowCount = 0;\n\nfor (let i = 0; i < csvData.length; i++) {\n  const item = csvData[i].json;\n  rowCount++;\n\n  // [0] = student_id, [1] = name, [2] = degree_program, [3] = skills\n  const values = Object.values(item); \n  \n  \n  let name, degree, skills;\n  \n  if (values.length === 1 && typeof values[0] === 'string') {\n      const parts = values[0].split(',');\n      name = parts[1] || \"Unknown\";\n      degree = parts[2] || \"not specified\";\n      skills = parts[3] || \"none\";\n  } else {\n      name = values[1] || item.name || \"Unknown\";\n      degree = values[2] || item.degree_program || \"not specified\";\n      skills = values[3] || item.skills || \"none\";\n  }\n\n  profileText += `Student ${i + 1}: Name: ${name}, Program: ${degree}, Skills: ${skills}.\\n`;\n}\n\nreturn {\n  original_query: originalQuery,\n  student_profile: profileText.trim(),\n  csv_row_count: rowCount,\n  enriched_query: `Profile: ${profileText.trim()} Question: ${originalQuery}`\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        64,
+        -32
+      ],
+      "id": "562d0f5c-636a-47a6-b8a8-00c1f99b97e8",
+      "name": "Enrich Query with CSV"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://guardrails:8003/validate_text",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"text\": \"={{ $json.output }}\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        960,
+        -32
+      ],
+      "id": "6a1c1091-bc90-472f-bd7f-6bc7c6b5171e",
+      "name": "Guardrails Validation"
+    },
+    {
+      "parameters": {
+        "jsCode": "\nconst guardrailsResponse = $input.first().json;\nlet crewaiResponse = null;\n\ntry {\n\n  crewaiResponse = $('CrewAI - Multi-Agent Analysis').first().json;\n} catch (e) {\n  console.error('❌ Fehler:', e.message);\n}\n\n\nlet rawContent = crewaiResponse?.coach_message || \n                 crewaiResponse?.output || \n                 crewaiResponse?.message || \n                 crewaiResponse?.text || \n                 \"\";\n\n\nconst cleanContent = rawContent.replace(/After carefully reviewing.*?ethnicity\\./gs, '').trim();\n\nconst topJobs = crewaiResponse?.top_jobs || [];\nconst suggestedLearningPaths = crewaiResponse?.suggested_learning_paths || {};\n\n\nconst isValid = guardrailsResponse.is_valid && guardrailsResponse.status === 'OK';\n\nif (isValid && cleanContent.length > 0) {\n  return {\n    json: {\n      output: cleanContent,\n      top_jobs: topJobs,\n      suggested_learning_paths: suggestedLearningPaths,\n      validation_passed: true\n    }\n  };\n} else {\n\n  return {\n    json: {\n      output: isValid ? \"Analysis completed, but content is unavailable.\" : \"Response blocked for security reasons.\",\n      top_jobs: topJobs,\n      suggested_learning_paths: suggestedLearningPaths,\n      validation_passed: isValid\n    }\n  };\n}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1168,
+        -32
+      ],
+      "id": "fb8607e3-f196-4386-8a2a-f0e94060f558",
+      "name": "Handle Validation Result"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Haystack - Semantic Search": {
+      "main": [
+        [
+          {
+            "node": "Format Context for CrewAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Context for CrewAI": {
+      "main": [
+        [
+          {
+            "node": "CrewAI - Multi-Agent Analysis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CrewAI - Multi-Agent Analysis": {
+      "main": [
+        [
+          {
+            "node": "Guardrails Validation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Final Response": {
+      "main": [
+        [
+          {
+            "node": "Send Response to User",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received1": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "Enrich Query with CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enrich Query with CSV": {
+      "main": [
+        [
+          {
+            "node": "Haystack - Semantic Search",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Guardrails Validation": {
+      "main": [
+        [
+          {
+            "node": "Handle Validation Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Handle Validation Result": {
+      "main": [
+        [
+          {
+            "node": "Format Final Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "versionId": "de9e258a-dff4-42ae-a6e9-b28c45283416",
+  "meta": {
+    "instanceId": "c575343db7f6249e0c89d1c910da357481d785d93eedcc161166c2bda21156c4"
+  },
+  "id": "oY_v9Oi-aT9vzZ6nCMeS9",
+  "tags": []
+}

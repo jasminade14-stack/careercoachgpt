@@ -1,0 +1,342 @@
+{
+  "name": "CareerCoachGPT - Weaviate Setup & Import",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "start",
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://weaviate:8080/v1/schema",
+        "authentication": "none",
+        "options": {},
+        "bodyParametersJson": "{\n  \"class\": \"JobDescription\",\n  \"vectorizer\": \"text2vec-openai\",\n  \"moduleConfig\": {\n    \"text2vec-openai\": {\n      \"model\": \"text-embedding-3-small\",\n      \"vectorizeClassName\": false\n    }\n  },\n  \"properties\": [\n    {\n      \"name\": \"jobId\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Unique job identifier\"\n    },\n    {\n      \"name\": \"studyProgram\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Related study program\"\n    },\n    {\n      \"name\": \"degree\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Degree type\"\n    },\n    {\n      \"name\": \"roles\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Job roles and titles\"\n    },\n    {\n      \"name\": \"responsibilities\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Job responsibilities and tasks\"\n    },\n    {\n      \"name\": \"requirements\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Required qualifications and skills\"\n    },\n    {\n      \"name\": \"domain\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Professional domain\"\n    },\n    {\n      \"name\": \"source\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Data source\"\n    }\n  ]\n}"
+      },
+      "id": "schema_jobs",
+      "name": "Create Schema: JobDescription",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [460, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://weaviate:8080/v1/schema",
+        "authentication": "none",
+        "options": {},
+        "bodyParametersJson": "{\n  \"class\": \"SkillLearningPath\",\n  \"vectorizer\": \"text2vec-openai\",\n  \"moduleConfig\": {\n    \"text2vec-openai\": {\n      \"model\": \"text-embedding-3-small\",\n      \"vectorizeClassName\": false\n    }\n  },\n  \"properties\": [\n    {\n      \"name\": \"skillId\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Unique skill identifier\"\n    },\n    {\n      \"name\": \"studyProgram\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Related study program\"\n    },\n    {\n      \"name\": \"degree\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Degree type\"\n    },\n    {\n      \"name\": \"skills\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Key skills and competencies\"\n    },\n    {\n      \"name\": \"learningPaths\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Learning paths and development opportunities\"\n    },\n    {\n      \"name\": \"domain\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Professional domain\"\n    },\n    {\n      \"name\": \"source\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Data source\"\n    }\n  ]\n}"
+      },
+      "id": "schema_skills",
+      "name": "Create Schema: SkillLearningPath",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [460, 400]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://weaviate:8080/v1/schema",
+        "authentication": "none",
+        "options": {},
+        "bodyParametersJson": "{\n  \"class\": \"EthicsGuideline\",\n  \"vectorizer\": \"text2vec-openai\",\n  \"moduleConfig\": {\n    \"text2vec-openai\": {\n      \"model\": \"text-embedding-3-small\",\n      \"vectorizeClassName\": false\n    }\n  },\n  \"properties\": [\n    {\n      \"name\": \"ethicsId\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Unique ethics guideline identifier\"\n    },\n    {\n      \"name\": \"title\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Guideline title\"\n    },\n    {\n      \"name\": \"content\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Full guideline content\"\n    },\n    {\n      \"name\": \"category\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Ethics category\"\n    },\n    {\n      \"name\": \"domain\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Domain area\"\n    },\n    {\n      \"name\": \"source\",\n      \"dataType\": [\"text\"],\n      \"description\": \"Source reference\"\n    }\n  ]\n}"
+      },
+      "id": "schema_ethics",
+      "name": "Create Schema: EthicsGuideline",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [460, 600]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "job_data",
+              "name": "job_descriptions",
+              "value": "={{ $json.job_descriptions }}",
+              "type": "array"
+            },
+            {
+              "id": "skill_data",
+              "name": "skills_learning",
+              "value": "={{ $json.skills_learning }}",
+              "type": "array"
+            },
+            {
+              "id": "ethics_data",
+              "name": "ethics_guidelines",
+              "value": "={{ $json.ethics_guidelines }}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "prepare_data",
+      "name": "Prepare Import Data",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [680, 400]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "job_descriptions",
+        "options": {}
+      },
+      "id": "split_jobs",
+      "name": "Split Job Descriptions",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [900, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://weaviate:8080/v1/objects",
+        "authentication": "none",
+        "options": {},
+        "bodyParametersJson": "={\n  \"class\": \"JobDescription\",\n  \"properties\": {\n    \"jobId\": \"{{ $json.id }}\",\n    \"studyProgram\": \"{{ $json.study_program }}\",\n    \"degree\": \"{{ $json.degree }}\",\n    \"roles\": \"{{ $json.roles }}\",\n    \"responsibilities\": \"{{ $json.responsibilities }}\",\n    \"requirements\": \"{{ $json.requirements }}\",\n    \"domain\": \"{{ $json.domain }}\",\n    \"source\": \"{{ $json.source }}\"\n  }\n}"
+      },
+      "id": "import_jobs",
+      "name": "Import Job Description",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1120, 200]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "skills_learning",
+        "options": {}
+      },
+      "id": "split_skills",
+      "name": "Split Skills & Learning Paths",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [900, 400]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://weaviate:8080/v1/objects",
+        "authentication": "none",
+        "options": {},
+        "bodyParametersJson": "={\n  \"class\": \"SkillLearningPath\",\n  \"properties\": {\n    \"skillId\": \"{{ $json.id }}\",\n    \"studyProgram\": \"{{ $json.study_program }}\",\n    \"degree\": \"{{ $json.degree }}\",\n    \"skills\": \"{{ $json.skills }}\",\n    \"learningPaths\": \"{{ $json.learning_paths }}\",\n    \"domain\": \"{{ $json.domain }}\",\n    \"source\": \"{{ $json.source }}\"\n  }\n}"
+      },
+      "id": "import_skills",
+      "name": "Import Skill & Learning Path",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1120, 400]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "ethics_guidelines",
+        "options": {}
+      },
+      "id": "split_ethics",
+      "name": "Split Ethics Guidelines",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [900, 600]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://weaviate:8080/v1/objects",
+        "authentication": "none",
+        "options": {},
+        "bodyParametersJson": "={\n  \"class\": \"EthicsGuideline\",\n  \"properties\": {\n    \"ethicsId\": \"{{ $json.id }}\",\n    \"title\": \"{{ $json.title }}\",\n    \"content\": \"{{ $json.content }}\",\n    \"category\": \"{{ $json.category }}\",\n    \"domain\": \"{{ $json.domain }}\",\n    \"source\": \"{{ $json.source }}\"\n  }\n}"
+      },
+      "id": "import_ethics",
+      "name": "Import Ethics Guideline",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1120, 600]
+    },
+    {
+      "parameters": {
+        "url": "http://weaviate:8080/v1/objects?class=JobDescription&limit=3",
+        "authentication": "none",
+        "options": {}
+      },
+      "id": "verify_jobs",
+      "name": "Verify: Job Descriptions",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1340, 200]
+    },
+    {
+      "parameters": {
+        "url": "http://weaviate:8080/v1/objects?class=SkillLearningPath&limit=3",
+        "authentication": "none",
+        "options": {}
+      },
+      "id": "verify_skills",
+      "name": "Verify: Skills & Learning",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1340, 400]
+    },
+    {
+      "parameters": {
+        "url": "http://weaviate:8080/v1/objects?class=EthicsGuideline&limit=3",
+        "authentication": "none",
+        "options": {}
+      },
+      "id": "verify_ethics",
+      "name": "Verify: Ethics Guidelines",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1340, 600]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Create Schema: JobDescription",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Create Schema: SkillLearningPath",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Create Schema: EthicsGuideline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Schema: JobDescription": {
+      "main": [
+        [
+          {
+            "node": "Prepare Import Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Schema: SkillLearningPath": {
+      "main": [
+        [
+          {
+            "node": "Prepare Import Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Schema: EthicsGuideline": {
+      "main": [
+        [
+          {
+            "node": "Prepare Import Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Import Data": {
+      "main": [
+        [
+          {
+            "node": "Split Job Descriptions",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Split Skills & Learning Paths",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Split Ethics Guidelines",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Job Descriptions": {
+      "main": [
+        [
+          {
+            "node": "Import Job Description",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Import Job Description": {
+      "main": [
+        [
+          {
+            "node": "Verify: Job Descriptions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Skills & Learning Paths": {
+      "main": [
+        [
+          {
+            "node": "Import Skill & Learning Path",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Import Skill & Learning Path": {
+      "main": [
+        [
+          {
+            "node": "Verify: Skills & Learning",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Ethics Guidelines": {
+      "main": [
+        [
+          {
+            "node": "Import Ethics Guideline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Import Ethics Guideline": {
+      "main": [
+        [
+          {
+            "node": "Verify: Ethics Guidelines",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {}
+}

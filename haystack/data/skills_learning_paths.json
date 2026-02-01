@@ -1,0 +1,362 @@
+[
+  {
+    "id": "skill_001",
+    "study_program": "Accessory Design",
+    "degree": "Bachelor of Arts",
+    "skills": "creative thinking; visual design; aesthetic judgment; material awareness; trend analysis",
+    "learning_paths": "foundations of design principles; material studies; concept development projects; portfolio-based design work",
+    "domain": "Design",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_002",
+    "study_program": "Digital Business Management",
+    "degree": "Bachelor of Science",
+    "skills": "analytical thinking; business process analysis; digital literacy; data interpretation; problem solving",
+    "learning_paths": "business administration fundamentals; digital technologies overview; applied business analytics; case-based learning",
+    "domain": "Business & IT",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_003",
+    "study_program": "International Business",
+    "degree": "Bachelor of Science",
+    "skills": "cross-cultural communication; analytical reasoning; coordination skills; strategic awareness; business analysis",
+    "learning_paths": "international business fundamentals; intercultural studies; applied market analysis; global project work",
+    "domain": "Business",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_004",
+    "study_program": "International Marketing",
+    "degree": "Bachelor of Science",
+    "skills": "market analysis; communication skills; analytical thinking; strategic planning; consumer understanding",
+    "learning_paths": "marketing fundamentals; international market research; campaign planning; applied marketing projects",
+    "domain": "Marketing",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_005",
+    "study_program": "Business Information Systems",
+    "degree": "Bachelor of Science",
+    "skills": "systems thinking; requirements analysis; process modeling; analytical reasoning; technical literacy",
+    "learning_paths": "information systems foundations; business process modeling; applied IT projects; systems analysis practice",
+    "domain": "Information Systems",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_006",
+    "study_program": "Business Law",
+    "degree": "Bachelor of Law",
+    "skills": "legal analysis; analytical reading; attention to detail; structured reasoning; compliance awareness",
+    "learning_paths": "foundations of business law; contract analysis; regulatory frameworks; applied legal case studies",
+    "domain": "Law & Compliance",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_007",
+    "study_program": "Consumer Psychology and Market Research",
+    "degree": "Bachelor of Science",
+    "skills": "behavioral analysis; research design; data interpretation; critical thinking; statistical reasoning",
+    "learning_paths": "consumer psychology fundamentals; qualitative and quantitative research methods; applied data analysis; insight generation",
+    "domain": "Market Research",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_008",
+    "study_program": "Controlling, Accounting and Financial Management",
+    "degree": "Bachelor of Science",
+    "skills": "financial analysis; numerical reasoning; analytical thinking; reporting competence; attention to detail",
+    "learning_paths": "accounting fundamentals; financial planning techniques; budgeting and reporting practice; performance analysis",
+    "domain": "Finance",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_009",
+    "study_program": "Controlling, Finance and Accounting",
+    "degree": "Master of Science",
+    "skills": "advanced financial analysis; strategic reasoning; analytical thinking; decision support; reporting expertise",
+    "learning_paths": "advanced finance concepts; strategic controlling; management reporting; applied financial decision making",
+    "domain": "Finance",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_010",
+    "study_program": "Corporate Communication Management",
+    "degree": "Master of Science",
+    "skills": "strategic communication; stakeholder management; analytical thinking; writing competence; planning skills",
+    "learning_paths": "corporate communication fundamentals; stakeholder analysis; communication strategy development; applied communication projects",
+    "domain": "Communication",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_011",
+    "study_program": "Creative Communication and Brand Management",
+    "degree": "Master of Arts",
+    "skills": "creative thinking; brand understanding; strategic communication; analytical reasoning; conceptual skills",
+    "learning_paths": "brand management foundations; creative strategy development; campaign analysis; applied branding projects",
+    "domain": "Brand & Communication",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_012",
+    "study_program": "Creative Direction",
+    "degree": "Master of Arts",
+    "skills": "creative leadership; conceptual thinking; visual communication; decision making; coordination skills",
+    "learning_paths": "creative concept development; leadership in creative teams; visual strategy; applied creative projects",
+    "domain": "Creative Leadership",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_013",
+    "study_program": "Design & Future Making",
+    "degree": "Master of Arts",
+    "skills": "systems thinking; future-oriented analysis; creative problem solving; innovation thinking; strategic design",
+    "learning_paths": "design thinking foundations; trend and futures analysis; speculative design projects; innovation labs",
+    "domain": "Design Strategy",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_014",
+    "study_program": "Electrical Engineering / Information Technology",
+    "degree": "Bachelor of Engineering",
+    "skills": "technical problem solving; systems thinking; analytical reasoning; applied mathematics; precision",
+    "learning_paths": "engineering fundamentals; circuit and systems analysis; laboratory work; applied engineering projects",
+    "domain": "Engineering",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_015",
+    "study_program": "Embedded Systems",
+    "degree": "Master of Science",
+    "skills": "embedded systems analysis; technical problem solving; analytical reasoning; system integration; precision",
+    "learning_paths": "embedded systems foundations; hardware-software integration; applied system testing; optimization projects",
+    "domain": "Embedded Engineering",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_016",
+    "study_program": "Engineering and Management",
+    "degree": "Bachelor of Science / Master of Science",
+    "skills": "project coordination; analytical thinking; technical understanding; business reasoning; decision making",
+    "learning_paths": "engineering fundamentals; management basics; project-based learning; interdisciplinary teamwork",
+    "domain": "Engineering Management",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_017",
+    "study_program": "Fashion",
+    "degree": "Bachelor of Arts",
+    "skills": "creative design; trend awareness; aesthetic judgment; material understanding; visual thinking",
+    "learning_paths": "fashion design fundamentals; collection development; material studies; portfolio-based projects",
+    "domain": "Fashion Design",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_018",
+    "study_program": "Human Resources Management",
+    "degree": "Bachelor of Science / Master of Science",
+    "skills": "communication skills; organizational understanding; analytical reasoning; decision making; interpersonal sensitivity",
+    "learning_paths": "HR fundamentals; talent management concepts; workforce analytics; applied HR case studies",
+    "domain": "Human Resources",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_019",
+    "study_program": "Industrial Design",
+    "degree": "Bachelor of Arts",
+    "skills": "design methodology; creative problem solving; technical understanding; visual communication; prototyping skills",
+    "learning_paths": "industrial design fundamentals; prototyping techniques; applied product design; interdisciplinary projects",
+    "domain": "Industrial Design",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_020",
+    "study_program": "Information Systems",
+    "degree": "Master of Science",
+    "skills": "systems analysis; analytical reasoning; IT process understanding; problem solving; evaluation skills",
+    "learning_paths": "advanced information systems; digital transformation concepts; applied systems analysis; consulting projects",
+    "domain": "Information Systems",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_021",
+    "study_program": "Jewellery",
+    "degree": "Bachelor of Arts",
+    "skills": "craftsmanship; design sensitivity; material awareness; aesthetic judgment; precision",
+    "learning_paths": "jewellery design fundamentals; material exploration; prototyping; portfolio-based craftsmanship projects",
+    "domain": "Jewellery Design",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_022",
+    "study_program": "Life Cycle & Sustainability",
+    "degree": "Master of Science",
+    "skills": "systems thinking; environmental analysis; analytical reasoning; evaluation skills; sustainability awareness",
+    "learning_paths": "life cycle assessment fundamentals; sustainability metrics; applied environmental analysis; case studies",
+    "domain": "Sustainability",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_023",
+    "study_program": "Marketing",
+    "degree": "Bachelor of Science",
+    "skills": "market analysis; communication skills; analytical thinking; planning skills; customer orientation",
+    "learning_paths": "marketing fundamentals; campaign analysis; applied market research; project-based learning",
+    "domain": "Marketing",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_024",
+    "study_program": "Marketing Communication and Digital Marketing",
+    "degree": "Bachelor of Science",
+    "skills": "digital communication; analytical thinking; creativity; performance analysis; strategic awareness",
+    "learning_paths": "digital marketing fundamentals; content strategy; performance analytics; applied digital campaigns",
+    "domain": "Digital Marketing",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_025",
+    "study_program": "Marketing Intelligence",
+    "degree": "Master of Science",
+    "skills": "data-driven analysis; analytical reasoning; market insight generation; evaluation skills; strategic thinking",
+    "learning_paths": "marketing analytics fundamentals; data interpretation; insight development; applied analytics projects",
+    "domain": "Marketing Analytics",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_026",
+    "study_program": "Maschinenbau",
+    "degree": "Bachelor of Engineering",
+    "skills": "mechanical reasoning; technical problem solving; analytical thinking; precision; systems understanding",
+    "learning_paths": "mechanical engineering fundamentals; design and manufacturing basics; applied laboratory work; engineering projects",
+    "domain": "Mechanical Engineering",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_027",
+    "study_program": "International Management",
+    "degree": "Master of Business Administration",
+    "skills": "strategic thinking; business analysis; decision making; coordination skills; leadership orientation",
+    "learning_paths": "management fundamentals; strategic analysis; international case studies; applied management projects",
+    "domain": "Management",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_028",
+    "study_program": "Management",
+    "degree": "Master of Business Administration",
+    "skills": "business analysis; strategic reasoning; leadership skills; decision making; organizational understanding",
+    "learning_paths": "advanced management concepts; strategic planning; leadership development; applied management cases",
+    "domain": "Management",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_029",
+    "study_program": "Mechatronics",
+    "degree": "Bachelor of Engineering",
+    "skills": "system integration; technical problem solving; analytical reasoning; interdisciplinary thinking; precision",
+    "learning_paths": "mechatronics fundamentals; system integration labs; applied automation projects; testing and optimization",
+    "domain": "Mechatronics",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_030",
+    "study_program": "Media Management and Digital Media",
+    "degree": "Bachelor of Science",
+    "skills": "media analysis; digital literacy; analytical thinking; coordination skills; content understanding",
+    "learning_paths": "media management fundamentals; digital media analysis; content strategy; applied media projects",
+    "domain": "Media Management",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_031",
+    "study_program": "Medical Engineering",
+    "degree": "Bachelor of Engineering",
+    "skills": "technical analysis; precision; systems thinking; regulatory awareness; problem solving",
+    "learning_paths": "medical engineering fundamentals; device development basics; regulatory frameworks; applied lab projects",
+    "domain": "Medical Engineering",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_032",
+    "study_program": "Product Development",
+    "degree": "Master of Science",
+    "skills": "innovation thinking; analytical reasoning; technical evaluation; project coordination; problem solving",
+    "learning_paths": "product development fundamentals; innovation methods; feasibility analysis; applied development projects",
+    "domain": "Product Development",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_033",
+    "study_program": "Purchasing, Logistics and Supply Chain Management",
+    "degree": "Bachelor of Science",
+    "skills": "process analysis; analytical thinking; coordination skills; optimization thinking; planning skills",
+    "learning_paths": "supply chain fundamentals; logistics analysis; procurement processes; applied optimization projects",
+    "domain": "Supply Chain",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_034",
+    "study_program": "Strategic Innovation Management",
+    "degree": "Master of Arts",
+    "skills": "strategic thinking; innovation analysis; analytical reasoning; opportunity evaluation; decision making",
+    "learning_paths": "innovation management fundamentals; strategy development; trend analysis; applied innovation projects",
+    "domain": "Innovation Management",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_035",
+    "study_program": "Sustainability and Resource Efficiency",
+    "degree": "Bachelor of Science",
+    "skills": "systems thinking; analytical reasoning; sustainability awareness; evaluation skills; problem solving",
+    "learning_paths": "resource efficiency fundamentals; sustainability metrics; applied environmental projects; impact assessment",
+    "domain": "Sustainability",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_036",
+    "study_program": "Taxation & Auditing",
+    "degree": "Bachelor of Science",
+    "skills": "analytical reasoning; numerical accuracy; attention to detail; regulatory understanding; documentation skills",
+    "learning_paths": "taxation fundamentals; auditing principles; financial documentation analysis; applied audit cases",
+    "domain": "Tax & Audit",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_037",
+    "study_program": "Taxation, Auditing and Law",
+    "degree": "Master of Laws",
+    "skills": "advanced legal analysis; regulatory interpretation; analytical reasoning; precision; compliance thinking",
+    "learning_paths": "advanced tax law; audit regulation; compliance frameworks; applied legal advisory cases",
+    "domain": "Tax & Law",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_038",
+    "study_program": "Transportation Design",
+    "degree": "Bachelor of Arts",
+    "skills": "creative problem solving; design thinking; mobility understanding; visual communication; conceptual skills",
+    "learning_paths": "transportation design fundamentals; concept development; mobility studies; applied design projects",
+    "domain": "Transportation Design",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_039",
+    "study_program": "Transportation Design",
+    "degree": "Master of Arts",
+    "skills": "advanced design reasoning; systems thinking; creative leadership; mobility innovation; conceptual development",
+    "learning_paths": "advanced transportation concepts; systems-based design; leadership in design projects; innovation studios",
+    "domain": "Transportation Design",
+    "source": "O*NET (abstracted)"
+  },
+  {
+    "id": "skill_040",
+    "study_program": "Visual Communication",
+    "degree": "Bachelor of Arts",
+    "skills": "visual design; creative thinking; communication skills; aesthetic judgment; conceptual reasoning",
+    "learning_paths": "visual communication fundamentals; graphic design practice; media projects; portfolio development",
+    "domain": "Visual Design",
+    "source": "O*NET (abstracted)"
+  }
+]

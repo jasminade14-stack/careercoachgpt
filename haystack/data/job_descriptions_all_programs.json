@@ -1,0 +1,442 @@
+[
+  {
+    "id": "job_001",
+    "study_program": "Accessory Design",
+    "degree": "Bachelor of Arts",
+    "roles": "Accessory Designer; Product Design Assistant",
+    "responsibilities": "design and develop fashion accessories; translate creative concepts into market-ready products; collaborate with production and marketing teams",
+    "requirements": "strong design orientation; creativity and design methodology; understanding of materials and trends",
+    "domain": "Design",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_002",
+    "study_program": "Digital Business Management",
+    "degree": "Bachelor of Science",
+    "roles": "Digital Business Analyst; Digital Transformation Consultant",
+    "responsibilities": "analyze digital business models; support digital transformation initiatives; coordinate between business and technology units",
+    "requirements": "knowledge of business processes; affinity for digital technologies; analytical thinking",
+    "domain": "Business & IT",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_003",
+    "study_program": "International Business",
+    "degree": "Bachelor of Science",
+    "roles": "International Business Analyst; Global Operations Coordinator",
+    "responsibilities": "analyze international markets; support global business operations; coordinate cross-border projects",
+    "requirements": "business fundamentals; intercultural awareness; analytical capabilities",
+    "domain": "Business",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_004",
+    "study_program": "International Marketing",
+    "degree": "Bachelor of Science",
+    "roles": "International Marketing Specialist; Market Development Analyst",
+    "responsibilities": "develop international marketing strategies; analyze global target markets; support market entry initiatives",
+    "requirements": "marketing fundamentals; market research understanding; strong communication skills",
+    "domain": "Marketing",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_005",
+    "study_program": "Business Information Systems",
+    "degree": "Bachelor of Science",
+    "roles": "Business Systems Analyst; IT Business Consultant",
+    "responsibilities": "analyze information systems; support IT-enabled business processes; act as interface between business and IT",
+    "requirements": "basic knowledge of IT and business; process understanding; structured working style",
+    "domain": "Information Systems",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_006",
+    "study_program": "Business Law",
+    "degree": "Bachelor of Law",
+    "roles": "Legal Operations Assistant; Compliance Support Specialist",
+    "responsibilities": "support legal and regulatory reviews; analyze business law topics; assist compliance-related activities",
+    "requirements": "understanding of business law; analytical reading skills; attention to detail",
+    "domain": "Law & Compliance",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_007",
+    "study_program": "Consumer Psychology and Market Research",
+    "degree": "Bachelor of Science",
+    "roles": "Market Research Analyst; Consumer Insights Analyst",
+    "responsibilities": "analyze consumer behavior; design and evaluate market research studies; interpret qualitative and quantitative data",
+    "requirements": "psychological and research orientation; analytical thinking; data interpretation skills",
+    "domain": "Market Research",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_008",
+    "study_program": "Controlling, Accounting and Financial Management",
+    "degree": "Bachelor of Science",
+    "roles": "Junior Controller; Financial Planning Analyst",
+    "responsibilities": "support financial planning and reporting; analyze cost structures and performance indicators; assist budgeting processes",
+    "requirements": "financial and accounting fundamentals; analytical mindset; accuracy and reliability",
+    "domain": "Finance",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_009",
+    "study_program": "Controlling, Finance and Accounting",
+    "degree": "Master of Science",
+    "roles": "Financial Controller; Corporate Finance Analyst",
+    "responsibilities": "analyze financial performance; support strategic financial decisions; develop management reports",
+    "requirements": "advanced finance knowledge; analytical and structured thinking; business acumen",
+    "domain": "Finance",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_010",
+    "study_program": "Corporate Communication Management",
+    "degree": "Master of Science",
+    "roles": "Corporate Communications Manager; Internal Communications Specialist",
+    "responsibilities": "develop corporate communication strategies; manage internal and external communication; support reputation management",
+    "requirements": "strategic communication skills; stakeholder orientation; strong written communication",
+    "domain": "Communication",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_011",
+    "study_program": "Creative Communication and Brand Management",
+    "degree": "Master of Arts",
+    "roles": "Brand Manager; Creative Communications Strategist",
+    "responsibilities": "develop brand positioning strategies; coordinate creative communication campaigns; ensure consistent brand messaging",
+    "requirements": "brand and communication understanding; creative thinking; strategic orientation",
+    "domain": "Brand & Communication",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_012",
+    "study_program": "Creative Direction",
+    "degree": "Master of Arts",
+    "roles": "Creative Director; Concept Development Lead",
+    "responsibilities": "lead creative concepts and visual direction; coordinate interdisciplinary creative teams; translate strategy into creative output",
+    "requirements": "strong creative leadership; conceptual thinking; visual communication expertise",
+    "domain": "Creative Leadership",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_013",
+    "study_program": "Design & Future Making",
+    "degree": "Master of Arts",
+    "roles": "Design Strategist; Future Concepts Developer",
+    "responsibilities": "develop future-oriented design concepts; analyze societal and technological trends; apply design thinking methodologies",
+    "requirements": "strategic design thinking; innovation mindset; systems perspective",
+    "domain": "Design Strategy",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_014",
+    "study_program": "Digital Business Management",
+    "degree": "Master of Science",
+    "roles": "Digital Strategy Consultant; Business Innovation Analyst",
+    "responsibilities": "develop digital growth strategies; evaluate digital business opportunities; support innovation initiatives",
+    "requirements": "advanced business understanding; digital strategy orientation; analytical thinking",
+    "domain": "Digital Business",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_015",
+    "study_program": "Electrical Engineering / Information Technology",
+    "degree": "Bachelor of Engineering",
+    "roles": "Electrical Engineer; Systems Engineer",
+    "responsibilities": "design and maintain electrical systems; support system integration projects; analyze technical requirements",
+    "requirements": "engineering fundamentals; technical problem-solving skills; system-oriented thinking",
+    "domain": "Engineering",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_016",
+    "study_program": "Embedded Systems",
+    "degree": "Master of Science",
+    "roles": "Embedded Systems Engineer; Firmware Developer",
+    "responsibilities": "develop embedded hardware and software solutions; integrate hardware and software components; test and optimize system performance",
+    "requirements": "embedded systems knowledge; analytical and technical skills; attention to detail",
+    "domain": "Embedded Engineering",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_017",
+    "study_program": "Engineering and Management",
+    "degree": "Bachelor of Science",
+    "roles": "Technical Project Coordinator; Engineering Analyst",
+    "responsibilities": "support engineering projects; coordinate technical and business requirements; assist interdisciplinary teams",
+    "requirements": "engineering fundamentals; business understanding; analytical mindset",
+    "domain": "Engineering Management",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_018",
+    "study_program": "Engineering and Management",
+    "degree": "Master of Science",
+    "roles": "Technical Project Manager; Engineering Management Analyst",
+    "responsibilities": "coordinate complex technical projects; align engineering solutions with business goals; manage interdisciplinary teams",
+    "requirements": "advanced engineering knowledge; management skills; structured thinking",
+    "domain": "Engineering Management",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_019",
+    "study_program": "Fashion",
+    "degree": "Bachelor of Arts",
+    "roles": "Fashion Designer; Product Development Assistant",
+    "responsibilities": "design fashion collections; support product development processes; analyze fashion trends",
+    "requirements": "creative design skills; trend awareness; material understanding",
+    "domain": "Fashion Design",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_020",
+    "study_program": "Human Resources Management",
+    "degree": "Bachelor of Science",
+    "roles": "HR Specialist; Talent Management Coordinator",
+    "responsibilities": "support recruitment and talent development; assist HR planning processes; analyze workforce data",
+    "requirements": "HR fundamentals; communication skills; organizational understanding",
+    "domain": "Human Resources",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_021",
+    "study_program": "Human Resources Management",
+    "degree": "Master of Science",
+    "roles": "HR Business Partner; Workforce Development Analyst",
+    "responsibilities": "develop HR strategies; analyze workforce trends; support organizational development initiatives",
+    "requirements": "advanced HR knowledge; analytical thinking; strategic orientation",
+    "domain": "Human Resources",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_022",
+    "study_program": "Industrial Design",
+    "degree": "Bachelor of Arts",
+    "roles": "Industrial Designer; Product Design Assistant",
+    "responsibilities": "design functional and aesthetic products; develop prototypes and concepts; collaborate with engineering teams",
+    "requirements": "design methodology; technical understanding; creativity",
+    "domain": "Industrial Design",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_023",
+    "study_program": "Information Systems",
+    "degree": "Master of Science",
+    "roles": "Information Systems Analyst; Digital Solutions Consultant",
+    "responsibilities": "analyze and optimize information systems; support digital transformation initiatives; evaluate system requirements",
+    "requirements": "IT systems knowledge; analytical skills; process orientation",
+    "domain": "Information Systems",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_024",
+    "study_program": "Jewellery",
+    "degree": "Bachelor of Arts",
+    "roles": "Jewellery Designer; Product Design Assistant",
+    "responsibilities": "design jewellery concepts; develop prototypes; analyze material and production techniques",
+    "requirements": "design sensitivity; material knowledge; craftsmanship orientation",
+    "domain": "Jewellery Design",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_025",
+    "study_program": "Life Cycle & Sustainability",
+    "degree": "Master of Science",
+    "roles": "Sustainability Analyst; Life Cycle Assessment Specialist",
+    "responsibilities": "analyze product life cycles; evaluate environmental impacts; support sustainability strategies",
+    "requirements": "sustainability knowledge; analytical thinking; systems perspective",
+    "domain": "Sustainability",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_026",
+    "study_program": "Management and Engineering",
+    "degree": "Master of Science",
+    "roles": "Engineering Strategy Analyst; Technology Management Consultant",
+    "responsibilities": "analyze technology-driven business strategies; support management decision-making; coordinate innovation projects",
+    "requirements": "engineering background; strategic thinking; analytical skills",
+    "domain": "Management & Engineering",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_027",
+    "study_program": "Marketing",
+    "degree": "Bachelor of Science",
+    "roles": "Marketing Analyst; Marketing Coordinator",
+    "responsibilities": "support marketing campaigns; analyze market data; coordinate marketing activities",
+    "requirements": "marketing fundamentals; analytical mindset; communication skills",
+    "domain": "Marketing",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_028",
+    "study_program": "Marketing Communication and Digital Marketing",
+    "degree": "Bachelor of Science",
+    "roles": "Digital Marketing Specialist; Marketing Communications Analyst",
+    "responsibilities": "plan digital marketing campaigns; analyze online marketing performance; support content strategies",
+    "requirements": "digital marketing understanding; analytical thinking; communication skills",
+    "domain": "Digital Marketing",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_029",
+    "study_program": "Marketing Intelligence",
+    "degree": "Master of Science",
+    "roles": "Marketing Intelligence Analyst; Market Analytics Specialist",
+    "responsibilities": "analyze marketing and customer data; generate market insights; support strategic marketing decisions",
+    "requirements": "data-driven mindset; analytical skills; business understanding",
+    "domain": "Marketing Analytics",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_030",
+    "study_program": "Maschinenbau",
+    "degree": "Bachelor of Engineering",
+    "roles": "Mechanical Engineer; Production Engineering Assistant",
+    "responsibilities": "design mechanical components; support manufacturing processes; analyze technical specifications",
+    "requirements": "mechanical engineering fundamentals; technical problem-solving; precision",
+    "domain": "Mechanical Engineering",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_031",
+    "study_program": "International Management",
+    "degree": "Master of Business Administration",
+    "roles": "Management Consultant; Global Strategy Analyst",
+    "responsibilities": "analyze international business strategies; support executive decision-making; coordinate global initiatives",
+    "requirements": "strategic thinking; business acumen; international perspective",
+    "domain": "Management",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_032",
+    "study_program": "Management",
+    "degree": "Master of Business Administration",
+    "roles": "Business Strategy Analyst; Management Consultant",
+    "responsibilities": "analyze business performance; support strategic planning; coordinate management initiatives",
+    "requirements": "business acumen; analytical thinking; leadership orientation",
+    "domain": "Management",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_033",
+    "study_program": "Mechatronics",
+    "degree": "Bachelor of Engineering",
+    "roles": "Mechatronics Engineer; Automation Engineer",
+    "responsibilities": "develop mechatronic systems; integrate mechanical, electrical and software components; test and optimize systems",
+    "requirements": "mechatronics fundamentals; system integration skills; analytical thinking",
+    "domain": "Mechatronics",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_034",
+    "study_program": "Media Management and Digital Media",
+    "degree": "Bachelor of Science",
+    "roles": "Digital Media Manager; Media Strategy Analyst",
+    "responsibilities": "manage digital media projects; analyze media performance; support content strategies",
+    "requirements": "media management understanding; analytical skills; digital affinity",
+    "domain": "Media Management",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_035",
+    "study_program": "Medical Engineering",
+    "degree": "Bachelor of Engineering",
+    "roles": "Medical Devices Engineer; Biomedical Engineering Assistant",
+    "responsibilities": "support development of medical devices; analyze technical and regulatory requirements; test medical systems",
+    "requirements": "engineering fundamentals; medical technology awareness; precision",
+    "domain": "Medical Engineering",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_036",
+    "study_program": "Product Development",
+    "degree": "Master of Science",
+    "roles": "Product Development Engineer; Innovation Project Specialist",
+    "responsibilities": "develop new products; coordinate development phases; evaluate technical feasibility",
+    "requirements": "product development knowledge; analytical skills; innovation mindset",
+    "domain": "Product Development",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_037",
+    "study_program": "Purchasing, Logistics and Supply Chain Management",
+    "degree": "Bachelor of Science",
+    "roles": "Supply Chain Analyst; Procurement Specialist",
+    "responsibilities": "analyze supply chain processes; support procurement activities; optimize logistics operations",
+    "requirements": "supply chain understanding; analytical thinking; process orientation",
+    "domain": "Supply Chain",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_038",
+    "study_program": "Strategic Innovation Management",
+    "degree": "Master of Arts",
+    "roles": "Innovation Manager; Strategy and Innovation Analyst",
+    "responsibilities": "develop innovation strategies; analyze market and technology trends; support strategic initiatives",
+    "requirements": "strategic thinking; innovation orientation; analytical skills",
+    "domain": "Innovation Management",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_039",
+    "study_program": "Sustainability and Resource Efficiency",
+    "degree": "Bachelor of Science",
+    "roles": "Resource Efficiency Analyst; Sustainability Consultant",
+    "responsibilities": "analyze resource usage; support sustainability projects; evaluate efficiency measures",
+    "requirements": "sustainability fundamentals; analytical mindset; systems thinking",
+    "domain": "Sustainability",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_040",
+    "study_program": "Taxation & Auditing",
+    "degree": "Bachelor of Science",
+    "roles": "Tax Analyst; Audit Assistant",
+    "responsibilities": "support tax calculations; assist audit processes; analyze financial documentation",
+    "requirements": "tax and accounting fundamentals; accuracy; analytical thinking",
+    "domain": "Tax & Audit",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_041",
+    "study_program": "Taxation, Auditing and Law",
+    "degree": "Master of Laws",
+    "roles": "Tax Compliance Specialist; Legal Audit Consultant",
+    "responsibilities": "analyze tax and legal compliance issues; support audit and advisory projects; interpret regulatory frameworks",
+    "requirements": "advanced tax and legal knowledge; analytical reading skills; precision",
+    "domain": "Tax & Law",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_042",
+    "study_program": "Transportation Design",
+    "degree": "Bachelor of Arts",
+    "roles": "Transportation Designer; Mobility Concept Developer",
+    "responsibilities": "design vehicle and mobility concepts; develop future transportation solutions; collaborate with engineering teams",
+    "requirements": "design and mobility understanding; creative thinking; concept development skills",
+    "domain": "Transportation Design",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_043",
+    "study_program": "Transportation Design",
+    "degree": "Master of Arts",
+    "roles": "Senior Transportation Designer; Mobility Innovation Specialist",
+    "responsibilities": "lead transportation design projects; develop advanced mobility concepts; integrate design and technology perspectives",
+    "requirements": "advanced design expertise; systems thinking; leadership skills",
+    "domain": "Transportation Design",
+    "source": "HS Pforzheim study programs (abstracted)"
+  },
+  {
+    "id": "job_044",
+    "study_program": "Visual Communication",
+    "degree": "Bachelor of Arts",
+    "roles": "Visual Communication Designer; Graphic Design Specialist",
+    "responsibilities": "develop visual communication concepts; design visual media; ensure consistent visual language",
+    "requirements": "visual design skills; creativity; communication orientation",
+    "domain": "Visual Design",
+    "source": "HS Pforzheim study programs (abstracted)"
+  }
+]

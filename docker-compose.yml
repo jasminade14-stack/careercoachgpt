@@ -1,0 +1,97 @@
+services:
+  crewai:
+    image: ai-stack-crewai:latest
+    container_name: crewai
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./student_support:/app/student_support
+    working_dir: /app/student_support
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  guardrails:
+    build:
+      context: ./guardrails
+      dockerfile: Dockerfile
+    container_name: guardrails
+    ports:
+      - "8003:8003"
+    volumes:
+      - ./guardrails:/app
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  haystack:
+    build:
+      context: .
+      dockerfile: haystack/Dockerfile
+    container_name: haystack
+    ports:
+      - "8002:8002"
+    volumes:
+      - .:/app
+    depends_on:
+      - weaviate
+    restart: unless-stopped
+  command: tail -f /dev/null
+  
+  flowise:
+    image: flowiseai/flowise:latest
+    container_name: flowise
+    ports:
+      - "3000:3000"
+    volumes:
+      - flowise-data:/root/.flowise
+    restart: unless-stopped
+
+  weaviate:
+    image: semitechnologies/weaviate:latest
+    container_name: weaviate
+    ports:
+      - "8080:8080"
+      - "50051:50051"
+    volumes:
+      - weaviate-data:/var/lib/weaviate
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: "true"
+      PERSISTENCE_DATA_PATH: "/var/lib/weaviate"
+      DEFAULT_VECTORIZER_MODULE: "text2vec-transformers"
+      ENABLE_MODULES: "text2vec-transformers"
+      CLUSTER_HOSTNAME: "node1"
+      TRANSFORMERS_INFERENCE_API: "http://t2v-transformers:8080"
+    restart: unless-stopped
+    depends_on:
+      - t2v-transformers
+
+  t2v-transformers:
+    image: semitechnologies/transformers-inference:sentence-transformers-multi-qa-MiniLM-L6-cos-v1
+    container_name: t2v-transformers
+    environment:
+      ENABLE_CUDA: "0"
+    restart: unless-stopped
+
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: n8n
+    ports:
+      - "5678:5678"
+    volumes:
+      - n8n-data:/home/node/.n8n
+    environment:
+      N8N_BASIC_AUTH_ACTIVE: "true"
+      N8N_BASIC_AUTH_USER: admin
+      N8N_BASIC_AUTH_PASSWORD: changeme
+      N8N_HOST: localhost
+      N8N_PORT: 5678
+      N8N_PROTOCOL: http
+      WEBHOOK_URL: http://localhost:5678/
+    restart: unless-stopped
+
+volumes:
+  flowise-data:
+  weaviate-data:
+  n8n-data:

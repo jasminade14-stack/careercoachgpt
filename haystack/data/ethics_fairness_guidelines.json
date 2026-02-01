@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ethics_001",
+    "title": "Fairness and Non-Discrimination in Career Guidance",
+    "content": "Automated career guidance systems must not discriminate against individuals based on gender, ethnicity, socioeconomic background, age, or disability. Recommendations should be based solely on relevant qualifications, interests, and competencies.",
+    "category": "Fairness",
+    "domain": "Ethics & Governance",
+    "source": "OECD AI Principles; EU Ethics Guidelines (abstracted)"
+  },
+  {
+    "id": "ethics_002",
+    "title": "Bias Prevention and Risk Awareness",
+    "content": "Career recommendation systems should actively identify and mitigate potential sources of bias in data and decision logic. Historical patterns must not be blindly reproduced if they reinforce inequality or exclusion.",
+    "category": "Bias Prevention",
+    "domain": "Ethics & Governance",
+    "source": "EU Ethics Guidelines for Trustworthy AI (abstracted)"
+  },
+  {
+    "id": "ethics_003",
+    "title": "Transparency and Explainability",
+    "content": "Users must be able to understand why a specific job or learning path was recommended. Systems should provide clear, human-readable explanations that reference the criteria and data sources used.",
+    "category": "Transparency",
+    "domain": "Ethics & Governance",
+    "source": "OECD AI Principles; NIST AI RMF (abstracted)"
+  },
+  {
+    "id": "ethics_004",
+    "title": "Responsible Use of Personal Data",
+    "content": "Only data that is necessary for career guidance should be processed. Sensitive personal attributes must not be used for decision-making. Data handling should follow principles of data minimization and purpose limitation.",
+    "category": "Data Responsibility",
+    "domain": "Ethics & Governance",
+    "source": "EU Ethics Guidelines; GDPR principles (abstracted)"
+  },
+  {
+    "id": "ethics_005",
+    "title": "Human Oversight and Accountability",
+    "content": "Automated recommendations should support, not replace, human judgment. Users must be able to question or override recommendations, and responsibility for outcomes must remain with human decision-makers.",
+    "category": "Human Oversight",
+    "domain": "Ethics & Governance",
+    "source": "OECD AI Principles; NIST AI RMF (abstracted)"
+  }
+]
