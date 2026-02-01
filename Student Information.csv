@@ -1,0 +1,4 @@
+student_id,name,degree_program,skills,interests
+"101,John Doe,Computer Science,""Python, Docker, SQL"",""AI Development, Cloud Computing"""
+"102,Jane Smith,Industrial Engineering,""Project Management, Excel"",""Sustainability, Logistics"" "
+"103,Kevin Miller,Digital Marketing,""Social Media, SEO, Copywriting"",""Content Strategy, E-Commerce"""
