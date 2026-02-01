@@ -112,11 +112,7 @@ This step only needs to be executed once.
 ## n8n Workflow Setup
 
 1. Open n8n in your browser:
-
-   ```
-   ```
-
-n   [http://localhost:5678](http://localhost:5678)
+- [http://localhost:5678](http://localhost:5678)
 
 ```
 2. Import the workflow file:
