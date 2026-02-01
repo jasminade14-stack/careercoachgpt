@@ -163,4 +163,3 @@ All outputs are validated before being returned to the user.
 
 This project is intended for academic and educational use only.
 
-```
