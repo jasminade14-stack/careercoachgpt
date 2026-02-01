@@ -65,7 +65,7 @@ No external cloud APIs are required. All services run locally.
 You may either clone the repository using Git or download it as a ZIP archive and extract it locally.
 
 ```
-git clone https://github.com/jasminade14-stack/careercoachgpt.git
+git clone <repository-url>
 cd careercoachgpt
 ```
 
@@ -112,7 +112,11 @@ This step only needs to be executed once.
 ## n8n Workflow Setup
 
 1. Open n8n in your browser:
-- [http://localhost:5678](http://localhost:5678)
+
+   ```
+   ```
+
+[http://localhost:5678](http://localhost:5678)
 
 ```
 2. Import the workflow file:
