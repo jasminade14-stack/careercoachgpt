@@ -65,7 +65,7 @@ No external cloud APIs are required. All services run locally.
 You may either clone the repository using Git or download it as a ZIP archive and extract it locally.
 
 ```
-git clone <repository-url>
+git clone https://github.com/jasminade14-stack/careercoachgpt.git
 cd careercoachgpt
 ```
 
