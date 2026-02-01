@@ -113,19 +113,13 @@ This step only needs to be executed once.
 
 1. Open n8n in your browser:
 
-   ```
-   ```
-
 [http://localhost:5678](http://localhost:5678)
 
-   ```
-   ```
+ 
 2. Import the workflow file:
-   ```
-   ```
+
 - `careercoach-workflow.json`
-   ```
-   ```
+
 3. Activate the workflow.
 
 The workflow orchestrates CSV-based profile enrichment, semantic retrieval, multi-agent reasoning, and governance validation.
